@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+import Combine
+
+struct TaskType: Identifiable {
+    var id = String()
+    var task = String()
+}
+
+class TaskStore: ObservableObject {
+    @Published var tasks = [TaskType]()
+}
